@@ -31,7 +31,11 @@ export default function Admin() {
       <h1 className="text-2xl font-bold !mt-10">Recently Tests</h1>
       <div className="flex flex-col gap-2 my-5">
         {[0, 1, 2, 3].map((item, index) => (
-          <Link href="/admin/test/1" className="no-underline text-black">
+          <Link
+            key={index}
+            href="/admin/test/1"
+            className="no-underline text-black"
+          >
             <div className="rounded border flex items-center gap-2 p-3 hover:bg-neutral-100 cursor-pointer">
               <div className="flex-1">
                 <div className="text-xs">12/05/2023</div>
@@ -58,8 +62,12 @@ export default function Admin() {
       </div>
       <h1 className="text-2xl font-bold !mt-10">All Tests</h1>
       <div className="flex flex-col gap-2 my-5">
-        {[0, 1, 2, 3].map((item, index) => (
-          <Link href="/admin/test/1" className="no-underline text-black">
+        {[4, 5, 6, 7, 8].map((item, index) => (
+          <Link
+            key={index}
+            href="/admin/test/1"
+            className="no-underline text-black"
+          >
             <div className="rounded border flex items-center gap-2 p-3 hover:bg-neutral-100 cursor-pointer">
               <div className="flex-1">
                 <div className="text-xs">12/05/2023</div>
