@@ -8,21 +8,27 @@ import { ConfigProvider } from "antd";
 import "antd/dist/reset.css";
 
 // Redux
+import Head from "next/head";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
-      <ConfigProvider
-        theme={{
-          token: {
-            colorPrimary: "#6b46c1",
-          },
-        }}
-      >
-        <Component {...pageProps} />
-      </ConfigProvider>
-    </Provider>
+    <>
+      <Head>
+        <title>HRQM by Riyan Saputra</title>
+      </Head>
+      <Provider store={store}>
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: "#6b46c1",
+            },
+          }}
+        >
+          <Component {...pageProps} />
+        </ConfigProvider>
+      </Provider>
+    </>
   );
 }
