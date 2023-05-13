@@ -2,7 +2,7 @@ import { AiFillGithub, AiOutlineAlert } from "react-icons/ai";
 
 export default function UnderDev() {
   return (
-    <div className="fixed top-0 left-0 w-full bg-black text-white">
+    <div className="fixed top-0 z-50 left-0 w-full bg-black text-white">
       <div className="container mx-auto px-10 py-2 flex gap-2 items-center pb-3">
         <AiOutlineAlert className="text-xl" />
         <div className="pt-1 flex-1">
